@@ -1,0 +1,87 @@
+body{
+    margin: auto;
+    width: 50%;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+
+.rotate_dir{
+   
+    height: 90%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: direita 1.5s infinite linear;
+    
+
+}
+
+.rotate_esq{
+    
+    height: 90%;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: esquerda 1.5s infinite linear;
+}
+
+.pause{
+    
+    height: 90%;
+    position:fixed ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lumen{
+    
+    height: 90%;
+    position:fixed ;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+    opacity: 1;
+    animation: fade 2s linear infinite;
+    
+}
+
+
+@keyframes direita{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+            }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+@keyframes esquerda{
+    0%{
+        transform: translate(-50%,-50%) rotate(360deg);
+            }
+    100%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
+
+@keyframes fade {
+    0%,100% { opacity: 0 }
+    50% { opacity: 1 }
+  }
+  #animation {
+	animation-name: example;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@keyframes example {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
